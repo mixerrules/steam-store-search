@@ -1,6 +1,9 @@
 import {SortBy} from "./enums/sortBy"
 import {MaxPrice} from "./enums/maxPrice"
 
+/**
+ * A class used to easily build a query string for the API.
+ */
 export class QueryBuilder {
     private static STEAM_SEARCH_URL: string = 'https://store.steampowered.com/search/'
 

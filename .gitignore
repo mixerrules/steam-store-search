@@ -1,6 +1,7 @@
 lib
 .idea
 .vscode
+docs
 
 ### Node template
 # Logs
