@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "npx tsc",
-    "refresh": "rm -rf node_modules && npm install"
+    "refresh": "rm -rf node_modules && npm install",
+    "test": "npx mocha"
   },
   "keywords": [
     "steam",
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "@types/node": "^17.0.21",
+    "mocha": "^9.2.1",
     "typescript": "^4.6.2"
   }
 }
