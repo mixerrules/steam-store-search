@@ -1,0 +1,28 @@
+{
+  "name": "steam-store-search",
+  "version": "1.0.0",
+  "description": "API for searching on the Steam store.",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "refresh": "rm -rf node_modules && npm install"
+  },
+  "keywords": [
+    "steam",
+    "api",
+    "search",
+    "store",
+    "games"
+  ],
+  "author": "Jeppe Vinkel Beier <jeppevinkel@gmail.com> (https://jeppdev.com/)",
+  "license": "MIT",
+  "bin": {
+    "steam-store-search": "./bin/index.js"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.2"
+  }
+}
