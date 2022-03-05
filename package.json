@@ -1,5 +1,5 @@
 {
-  "name": "steam-store-search",
+  "name": "@jeppevinkel/steam-search",
   "version": "1.0.0-beta.1",
   "description": "API for searching on the Steam store.",
   "main": "lib/index.js",
