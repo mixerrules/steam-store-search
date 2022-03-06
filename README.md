@@ -13,15 +13,15 @@ npm install @jeppevinkel/steam-search
 
 ## Usage
 ```typescript
-import { SteamSearch, QueryBuilder } from '@jeppevinkel/steam-search'
+import {SteamSearch, QueryBuilder, ResultType} from '@jeppevinkel/steam-search'
 
-const steamSearch = new SteamSearch()
 let query = QueryBuilder.create()
     .search('counter-strike')
 
-steamSearch.search(query).then((results: ISearchResult[]) => {
+SteamSearch.search(query).then((results) => {
     for (let result of results) {
-        console.log(`(${result.appId}) ${result.name}`)
+        const type = result.type == ResultType.App ? 'App' : 'Bundle'
+        console.log(`[${type}] (${result.appId}) ${result.title}`)
     }
 })
 ```
