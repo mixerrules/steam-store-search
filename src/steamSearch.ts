@@ -3,6 +3,7 @@ import cheerio from 'cheerio'
 import {QueryBuilder} from './queryBuilder'
 import {ISearchResult} from './interfaces'
 import moment from 'moment'
+import {ResultType} from "./enums/resultType";
 
 export class SteamSearch {
 
@@ -31,10 +32,14 @@ export class SteamSearch {
                 momentDate = moment(releaseDate, 'YYYY')
             }
 
+            const type = $(el).attr('data-ds-appid') ? ResultType.App : ResultType.Bundle;
+            const id = $(el).attr('data-ds-appid') ?? $(el).attr('data-ds-bundleid') ?? '-1';
+
             results[i] = {
+                type: type,
                 url: new URL($(el).attr('href') ?? ''),
                 title: $(el).find('div.responsive_search_name_combined div.search_name span.title').text() ?? '',
-                appId: parseInt($(el).attr('data-ds-appid') ?? '-1'),
+                appId: parseInt(id),
                 releaseDate: (momentDate.isValid() ? momentDate : releaseDate),
                 reviewSummary: ($(el).find('div.responsive_search_name_combined div.search_reviewscore span').attr('data-tooltip-html') ?? '').replace('<br>', ', '),
             }

@@ -19,7 +19,7 @@ const steamSearch = new SteamSearch()
 let query = QueryBuilder.create()
     .search('counter-strike')
 
-steamSearch.search(query).then((results: SearchResult[]) => {
+steamSearch.search(query).then((results: ISearchResult[]) => {
     for (let result of results) {
         console.log(`(${result.appId}) ${result.name}`)
     }

@@ -1,6 +1,11 @@
 import {Moment} from 'moment'
+import {ResultType} from "../enums/resultType";
 
 export interface ISearchResult {
+    /**
+     * The type of the result.
+     */
+    type: ResultType
     /**
      * The title of the Steam app.
      */
