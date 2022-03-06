@@ -19,4 +19,15 @@
   "include": [
     "src/**/*.ts"
   ],
+  "typedocOptions": {
+    "entryPoints": [
+      "src/index.ts"
+    ],
+    "out": "docs",
+    "excludePrivate": true,
+    "footerDate": true,
+    "cross-package-definitions": [
+      "moment//moment.Moment => https://momentjs.com/docs/"
+    ],
+  }
 }
