@@ -1,6 +1,12 @@
-import {SteamSearch} from "./steamSearch";
-import {QueryBuilder} from "./queryBuilder";
-import {SortBy} from "./enums/sortBy";
-import {MaxPrice} from "./enums/maxPrice";
+import {SteamSearch} from './steamSearch'
+import {QueryBuilder} from './queryBuilder'
+import {SortBy, MaxPrice} from './enums'
+import {ISearchResult} from './interfaces'
 
-export {SteamSearch, QueryBuilder, SortBy, MaxPrice};
+export {
+    SteamSearch,
+    QueryBuilder,
+    SortBy,
+    MaxPrice,
+    ISearchResult
+}
