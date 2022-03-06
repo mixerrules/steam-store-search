@@ -32,7 +32,7 @@ export class SteamSearch {
             }
 
             results[i] = {
-                url: $(el).attr('href') ?? '',
+                url: new URL($(el).attr('href') ?? ''),
                 title: $(el).find('div.responsive_search_name_combined div.search_name span.title').text() ?? '',
                 appId: parseInt($(el).attr('data-ds-appid') ?? '-1'),
                 releaseDate: (momentDate.isValid() ? momentDate : releaseDate),
