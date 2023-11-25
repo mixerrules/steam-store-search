@@ -1,11 +1,11 @@
-# @mixerrules/steam-search
-(A modified fork of [@jeppevinkel/steam-search](https://github.com/jeppevinkel/steam-store-search))
+# @mixerrules/steam-store-search
+(A modified fork of [@jeppevinkel/steam-store-search](https://github.com/jeppevinkel/steam-store-search))
 
 Api for searching games from the Steam store.
 This search API works by calling the regular steam store page and scraping the results from the page. It doesn't yet support scrolling the page, so it might be limited in the number of results per search query.
 
 ## Differences
-The main Differences between [@jeppevinkel/steam-search](https://github.com/jeppevinkel/steam-store-search) and [@mixerrules/steam-search](https://github.com/mixerrules/steam-store-search) are as follows:
+The main Differences between [@jeppevinkel/steam-store-search](https://github.com/jeppevinkel/steam-store-search) and [@mixerrules/steam-store-search](https://github.com/mixerrules/steam-store-search) are as follows:
 - This version is able to to look up NSFW games that are normally block by the default preferences for an unsigned in account.
 - Rewrote major sections of SteamSearch.ts to use DOMParser & Element from deno_dom instead of using Cheerio & Axios.
 - Fixed alot of other things little to allow for it to be used locally with Deno.
