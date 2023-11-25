@@ -1,5 +1,5 @@
-import {SortBy} from "./enums/sortBy"
-import {MaxPrice} from "./enums/maxPrice"
+import {SortBy} from "./enums/sortBy.ts"
+import {MaxPrice} from "./enums/maxPrice.ts"
 
 /**
  * A class used to easily build a query string for the API.
@@ -63,7 +63,7 @@ export class QueryBuilder {
      * @return The search url with all the query parameters set.
      */
     public toString(): string {
-        let queryElements = new Array<string[]>(
+        const queryElements = new Array<string[]>(
             ['term', this._term],
             ['sort_by', this._sort],
             ['max_price', this._maxPrice],
@@ -74,7 +74,7 @@ export class QueryBuilder {
         }
 
         const params = new URLSearchParams(queryElements)
-
-        return `${QueryBuilder.STEAM_SEARCH_URL}?${params.toString()}`
+ 
+        return `${QueryBuilder.STEAM_SEARCH_URL}?${params.toString()}&ignore_preferences=1`
     }
 }

@@ -1,5 +1,5 @@
-import {Moment} from 'moment'
-import {ResultType} from "../enums/resultType";
+import {Moment} from 'npm:moment'
+import {ResultType} from "../enums/resultType.ts";
 
 export interface ISearchResult {
     /**

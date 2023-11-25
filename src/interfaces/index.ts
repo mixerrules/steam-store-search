@@ -1,5 +1,5 @@
-import {ISearchResult} from './searchResultInterface'
+import {ISearchResult} from './searchResultInterface.ts'
 
-export {
+export type {
     ISearchResult
 }

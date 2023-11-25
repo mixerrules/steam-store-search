@@ -1,6 +1,6 @@
-import {MaxPrice} from './maxPrice'
-import {SortBy} from './sortBy'
-import {ResultType} from "./resultType";
+import {MaxPrice} from './maxPrice.ts'
+import {SortBy} from './sortBy.ts'
+import {ResultType} from "./resultType.ts";
 
 export {
   MaxPrice,
