@@ -12,7 +12,12 @@ The main Differences between [@jeppevinkel/steam-store-search](https://github.co
 
 ## Usage
 ```typescript
+// Latest build from main branch
 import {SteamSearch, QueryBuilder, ResultType} from "https://raw.githubusercontent.com.com/mixerrules/steam-store-search/src/index.ts"
+
+// Latest build release hosted from denoland
+import * as steamStoreSearch from "https://deno.land/x/steam_store_search@1.0.0/src/index.ts";
+
 
 let query = QueryBuilder.create()
     .search('counter-strike')
