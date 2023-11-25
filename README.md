@@ -1,5 +1,6 @@
 # @mixerrules/steam-search
 (A modified fork of [@jeppevinkel/steam-search](https://github.com/jeppevinkel/steam-store-search)]
+
 Api for searching games from the Steam store.
 This search API works by calling the regular steam store page and scraping the results from the page. It doesn't yet support scrolling the page, so it might be limited in the number of results per search query.
 
